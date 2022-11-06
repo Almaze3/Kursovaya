@@ -1,0 +1,1 @@
+from nickname.func import nickname
