@@ -8,3 +8,4 @@ def nickname(mail):
     for i in range(len(matches)):
         d[i] = matches
     return matches
+#py manage.py runserver
