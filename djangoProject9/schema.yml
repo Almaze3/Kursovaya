@@ -1,0 +1,33 @@
+openapi: 3.0.3
+info:
+  title: Nickname API
+  version: 1.0.0
+  description: API that pulls the nickname from the email address
+paths:
+  /api/{mail}:
+    get:
+      operationId: api_retrieve
+      parameters:
+      - in: path
+        name: mail
+        schema:
+          type: string
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
