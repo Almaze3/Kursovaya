@@ -21,8 +21,26 @@ paths:
       - {}
       responses:
         '200':
-          description: No response body
+          content:
+            application/json:
+              schema:
+                description: 'The nickname was successfully withdrawn'
+                title: sample
+                type: object
+                $ref: '#/components/schemas/nickname'
+
 components:
+  schemas:
+    nickname:
+      type: object
+      properties:
+        mail:
+          type: string
+        name:
+          type: string
+      required:
+        - mail
+        - name
   securitySchemes:
     basicAuth:
       type: http
