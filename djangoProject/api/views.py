@@ -12,12 +12,9 @@ from drf_spectacular.utils import extend_schema
 
 class MailView(APIView):
     @extend_schema(request=MailSerializer, responses=MailSerializer)
-
     def get(self, request, mail):
         name = Mail(mail, nickname.nickname(mail))
 
         serializer_for_request = MailSerializer(instance=name)
 
         return Response(serializer_for_request.data)
-
-
