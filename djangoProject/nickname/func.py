@@ -9,3 +9,4 @@ def nickname(mail):
         d[i] = matches
     return matches
 #py manage.py runserver
+#docker-compose build/up/down
