@@ -1,5 +1,4 @@
 from django.test import TestCase, Client
-from .views import index
 
 
 class ReplacerTests(TestCase):
